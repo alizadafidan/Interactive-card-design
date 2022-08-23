@@ -170,8 +170,10 @@ body {
   font-family: inherit;
   font-size: 1em;
   outline: none;
-  border: 1px solid hsl(270deg, 3%, 87%);
   padding-left: 10px;
+  box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%);
+  border-radius: 9px;
+  border: none;
 }
 
 .form-input::placeholder {
