@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/*MAIN SECTION*/
+.main-container {
+  width: 375px;
+  height: auto;
+  width: auto;
+  background: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+.main-container-background {
+  background-image: url(images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  height: 240px;
+}
+
+.main-container-form {
+  padding: 90px 24px 45px;
+  background: hsl(0, 0%, 100%);
+  margin-left: 20px;
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    width: 1200px;
+    display: flex;
+  }
+
+  .main-container-background {
+    background-image: url(images/bg-main-desktop.png);
+    width: 900px;
+    height: 900px;
+  }
+}
+
+/*CARD PART*/
+
+.card {
+  width: 288px;
+  height: 160rem;
+  color: hsl(0, 0%, 100%);
+  padding: 20px;
+  background-image: url(images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 126px;
+  left: 18px;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: 450px;
+    height: 247px;
+    padding: 30px;
+    top: 187px;
+    left: 167px;
+  }
+}
+
+.card-logo {
+  width: 55px;
+  margin-bottom: 30px;
+}
+
+.card-number {
+  margin-bottom: 15px;
+}
+
+.card-details {
+  display: flex;
+  font-size: 0.6em;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .card-logo {
+    width: 86px;
+    margin-bottom: 55px;
+  }
+
+  .card-number {
+    font-size: 1.6em;
+    margin-bottom: 25px;
+  }
+
+  .card-details {
+    font-size: 0.8em;
+  }
+}
+
+/*BACK OF THE CARD*/
+
+.card-back {
+  width: 288px;
+  height: 160px;
+  color: hsl(0, 0%, 100%);
+  padding: 20px;
+  background-image: url(images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 35px;
+  left: 75px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 1200px) {
+  .card-back {
+    width: 450px;
+    height: 247px;
+    padding: 30px;
+    top: 469px;
+    left: 257px;
+  }
+}
+
+/*CARD CVC*/
+
+.card-cvc {
+  font-size: 0.7em;
+  margin-top: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+@media (min-width: 1200px) {
+  .card-cvc {
+    font-size: 1em;
+    margin-top: 80px;
+    padding-right: 30px;
+  }
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .form-label {
+    font-size: 0.87em;
+  }
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1em;
+  outline: none;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  padding-left: 10px;
+}
+
+.form-input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+
+.form-date-cvc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.form-date {
+  display: flex;
+  gap: 10px;
+}
+
+.form-submit,
+.thanks-section-button {
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-family: inherit;
+  border: none;
+  color: white;
+}
+
+.form-submit:hover,
+.form-submit:active,
+.thanks-section-button:hover,
+.thanks-section-button:active {
+  cursor: pointer;
+  background-color: hsl(279, 6%, 55%);
+}
+
+@media (min-width: 1200px) {
+  .form {
+    width: 386px;
+    margin-top: 32%;
+    margin-right: 1.2em;
+  }
+  .form-input {
+    margin-bottom: 40px;
+  }
+}
+
+/*ERROR*/
+
+.error {
+  color: red;
+  margin: -10px 0 18px;
+  font-size: 0.6em;
+}
+
+.form-error-container {
+  display: flex;
+  gap: 5px;
+  margin: -10px 0px 5px;
+}
+
+@media (min-width: 1200px) {
+  .error {
+    margin-top: -18px;
+  }
+
+  .form-error-container {
+    gap: 1.19rem;
+    margin-top: -18px;
+  }
+}
+
+.form-error-container div {
+  width: 80px;
+  text-align: left;
+  margin-top: 1px;
+}
+
+/*THANKS SECTION*/
+.thanks-section {
+  display: none;
+  width: 325px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.thanks-section-img {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.thanks-section-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: hsl(278deg, 68%, 11%);
+  margin-bottom: 24px;
+}
+
+.thanks-section-text {
+  text-align: center;
+  color: hsl(279deg, 6%, 55%);
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1200px) {
+  .thanks-section {
+    margin-top: 160px;
+  }
+}

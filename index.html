@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Payment</title>
+  </head>
+  <body>
+    <main class="main-container" role="main">
+      <section class="main-container-background">
+        <!-- Card front section -->
+        <div class="card">
+          <img class="card-logo" src="/images/card-logo.svg" alt="logo" />
+          <p class="card-number">0000 0000 0000 0000</p>
+          <div class="card-details">
+            <p class="card-details-name">Fidan Alizada</p>
+            <p class="card-details-date">
+              <span class="card-details-month">00</span
+              ><span class="card-details-year">00</span>
+            </p>
+          </div>
+        </div>
+        <!-- Card Back section -->
+        <div class="card-back">
+          <p class="card-cvc">000</p>
+        </div>
+      </section>
+
+      <!-- Form section -->
+
+      <section class="main-container-form">
+        <form action="#" class="form" id="form" method="post">
+          <!-- Cardholder form -->
+          <label for="cardholder" class="form-label">Cardholder Name</label>
+          <input
+            type="text"
+            class="form-input"
+            name="cardholder"
+            id="cardholder"
+            maxlength="29"
+            placeholder="Fidan Alizada"
+          />
+          <div class="form-caldholder-error error"></div>
+
+          <!-- Card Number form -->
+          <label for="cardnumber" class="form-label">Card Number</label>
+          <input
+            type="text"
+            class="form-input"
+            name="cardnumber"
+            id="cardnumber"
+            maxlength="19"
+            placeholder="0000 0000 0000 0000"
+          />
+          <div class="form-cardnumber-error error"></div>
+
+          <!-- Date/CVC form -->
+          <!-- Using GRID  -->
+          <div class="form-date-cvc">
+            <!-- 1 -->
+            <label for="cardmonth" class="form-label">Exp. Date (MM/YY)</label>
+            <!-- 2 -->
+            <label for="cardcvc" class="form-label">CVC</label>
+            <!-- 3 -->
+            <div class="form-date">
+              <input
+                type="text"
+                class="form-input"
+                maxlength="3"
+                name="cardmonth"
+                placeholder="MM"
+              />
+              <input
+                type="text"
+                class="form-input"
+                maxlength="2"
+                name="card-details-year"
+                placeholder="YY"
+              />
+            </div>
+
+            <!-- 4 -->
+            <input
+              type="text"
+              class="form-input"
+              maxlength="3"
+              placeholder="123"
+              name="cardcvc"
+              id="cardcvc"
+            />
+          </div>
+          <!-- 5 -->
+          <div class="form-error-container">
+            <div class="form-mm-error error"></div>
+            <div class="form-yy-error error"></div>
+            <!-- 6 -->
+            <div class="form-cvc-error error"></div>
+          </div>
+
+          <input type="submit" class="form-submit" value="Confirm" />
+        </form>
+      </section>
+
+      <!-- <section class="thanks-section" id="thanks-section">
+        <img
+          src="images/icon-complete.svg"
+          class="thanks-section-img"
+          alt="thanks icon"
+        />
+
+        <h1 class="thanks-section-title">Thank you!</h1>
+        <p class="thanks-section-text">We've added your card details</p>
+        <button class="thanks-section-button">Continue</button>
+      </section> -->
+    </main>
+  </body>
+</html>
