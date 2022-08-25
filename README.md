@@ -17,6 +17,7 @@ Users should be able to:
 
 ### Built with
 
+- Javascript
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
